@@ -1,8 +1,5 @@
 import BorderCard from "./border-card";
 import {
-  CSS3Icon,
-  HTML5Icon,
-  LinuxIcon,
   ReactIcon,
   NextIcon,
   TypescriptIcon,
@@ -13,8 +10,9 @@ import {
   TailwindcssIcon,
   DockerIcon,
   AWSIcon,
-  HerokuIcon,
   GraphQLIcon,
+  MongoDBIcon,
+  PostgreSQLIcon,
 } from "../icons";
 
 const skills = [
@@ -29,10 +27,8 @@ const skills = [
   { name: "Docker", icon: DockerIcon },
   { name: "AWS", icon: AWSIcon },
   { name: "GraphQL", icon: GraphQLIcon },
-  { name: "HTML5", icon: HTML5Icon },
-  { name: "CSS3", icon: CSS3Icon },
-  { name: "Linux", icon: LinuxIcon },
-  { name: "Heroku", icon: HerokuIcon },
+  { name: "MongoDB", icon: MongoDBIcon },
+  { name: "PostgreSQL", icon: PostgreSQLIcon },
 ];
 
 const KnowledgeBase = () => {

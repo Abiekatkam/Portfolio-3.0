@@ -1,20 +1,26 @@
-import PROFILE_PICTURE from "../../assets/profile-pic-temp.png";
-import PIXALETED_PROFILE_PICTURE from "../../assets/pixaled-profile-pic.png";
+import PROFILE_PICTURE_1 from "../../assets/pollarroid-pic-1.png";
+import PROFILE_PICTURE_2 from "../../assets/pollarroid-pic-3.jpeg";
+import PROFILE_PICTURE_3 from "../../assets/pollarroid-pic-2.jpeg";
 import PIN_IMAGE from "../../assets/drawing-pin.png";
 
 
 const PolaroidGallery = () => {
   return (
-    <div className="sm:flex hidden items-center justify-center p-10 mx-auto">
+    <div className="sm:flex hidden items-center justify-center mb-10 mt-20 mx-auto">
       <div className="relative flex items-center justify-center w-full max-w-4xl">
         {/* Left Polaroid */}
-        <div className="relative z-10 transform -rotate-[12deg] translate-x-4 translate-y-10">
-          <PolaroidFrame image={PIXALETED_PROFILE_PICTURE} />
+        <div className="relative z-10 transform -rotate-[12deg] translate-x-10 translate-y-10">
+          <PolaroidFrame image={PROFILE_PICTURE_1} />
+        </div>
+        
+        {/* Center Polaroid (Overlaps Left and Right) */}
+        <div className="relative z-20 transform rotate-[0deg]  -translate-y-10 shadow-lg">
+          <PolaroidFrame image={PROFILE_PICTURE_2} />
         </div>
 
         {/* Right Polaroid (Overlaps Left) */}
-        <div className="relative z-20 transform rotate-[6deg] -translate-x-4">
-          <PolaroidFrame image={PROFILE_PICTURE} />
+        <div className="relative z-10 transform rotate-[12deg] -translate-x-10 translate-y-10">
+          <PolaroidFrame image={PROFILE_PICTURE_3} />
         </div>
       </div>
     </div>
@@ -39,7 +45,7 @@ const PolaroidFrame = ({ image }: { image: string }) => {
           <img
             src={image}
             alt="Portrait"
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 contrast-125 brightness-90"
+            className="w-full h-full object-cover transition-all duration-300 contrast-125 brightness-90"
           />
         </div>
       </div>

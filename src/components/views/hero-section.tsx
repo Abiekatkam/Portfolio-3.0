@@ -28,7 +28,7 @@ const HeroSection = () => {
               Modern Code.
             </h1>
 
-            <p className="max-w-lg sm:text-lg text-zinc-500 leading-relaxed font-medium">
+            <p className="max-w-lg sm:text-lg dark:text-zinc-500 text-zinc-700 leading-relaxed font-medium">
               Hi, I'm Abhishek — a full-stack developer focused on building
               immersive web experiences with clean engineering and intentional
               design. I specialize in modern frontend systems, scalable

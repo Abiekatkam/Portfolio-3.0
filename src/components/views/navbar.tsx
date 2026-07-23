@@ -8,12 +8,12 @@ import { useState } from "react";
 import {
   GITHUB_URL,
   GITHUB_USERNAME,
-  INSTAGRAM_URL,
-  INSTAGRAM_USERNAME,
+  LINKEDIN_URL,
+  LINKEDIN_USERNAME,
   TWITTER_URL,
   TWITTER_USERNAME,
 } from "../../lib/constants";
-import { FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   const location = useLocation();
@@ -40,10 +40,10 @@ const Navbar = () => {
       icon: FaGithub,
     },
     {
-      name: "Instagram profile",
-      label: INSTAGRAM_USERNAME,
-      href: INSTAGRAM_URL,
-      icon: FaInstagram,
+      name: "LinkedIn profile",
+      label: LINKEDIN_USERNAME,
+      href: LINKEDIN_URL,
+      icon: FaLinkedin,
     },
   ];
 

@@ -14,7 +14,7 @@ const ShortStory = () => {
           </h1>
         </div>
 
-        <p className="max-w-2xl mx-auto sm:text-lg text-zinc-500 leading-relaxed font-medium text-center">
+        <p className="max-w-2xl mx-auto sm:text-lg dark:text-zinc-500 text-zinc-700 leading-relaxed font-medium text-center">
           Over the past few years, I’ve been building modern web applications
           focused on performance, scalability, and user experience. From
           crafting responsive frontend interfaces to developing backend systems
@@ -25,7 +25,7 @@ const ShortStory = () => {
 
         <PolaroidGallery />
 
-        <p className="max-w-2xl mx-auto sm:mt-16 mt-10 text-center sm:text-lg text-zinc-500 leading-relaxed font-medium">
+        <p className="max-w-2xl mx-auto sm:mt-16 mt-10 text-center sm:text-lg dark:text-zinc-500 text-zinc-700 leading-relaxed font-medium">
           I’m deeply passionate about technology, design systems, AI tools, and
           developer ecosystems. I enjoy exploring emerging technologies,
           experimenting with new frameworks, and constantly improving my
@@ -34,7 +34,7 @@ const ShortStory = () => {
           part of the tech community and learning every day.
         </p>
 
-        <p className="max-w-2xl mx-auto mt-10 text-center sm:text-lg text-zinc-500 leading-relaxed font-medium">
+        <p className="max-w-2xl mx-auto mt-10 text-center sm:text-lg dark:text-zinc-500 text-zinc-700 leading-relaxed font-medium">
           Currently, I’m open to exciting opportunities where I can contribute
           to impactful products, collaborate with ambitious teams, and continue
           growing as a developer. Whether it’s frontend engineering, full-stack

@@ -1,4 +1,4 @@
-const Footer = () => {
+ const Footer = () => {
   return (
     <div className="max-w-7xl w-full relative py-12 px-4 sm:px-8 md:px-16 h-70 flex flex-col justify-end">
       <div
@@ -25,3 +25,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
