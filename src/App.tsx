@@ -5,10 +5,9 @@ const App = () => {
   return (
     <div className="pt-3">
       <Navbar />
-      <main className="max-w-6xl m-auto min-h-screen">
+      <main className="max-w-6xl m-auto">
         <AppRoutes />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };

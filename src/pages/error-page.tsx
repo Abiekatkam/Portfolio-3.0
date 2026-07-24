@@ -1,5 +1,11 @@
+import { NotFound } from "../components/views/not-found";
+
 const ErrorPage = () => {
-  return <div>ErrorPage</div>;
+  return (
+    <div>
+      <NotFound />
+    </div>
+  );
 };
 
 export default ErrorPage;
