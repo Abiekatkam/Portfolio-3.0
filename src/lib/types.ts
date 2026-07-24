@@ -60,3 +60,15 @@ export interface FlickeringGridProps extends React.HTMLAttributes<HTMLDivElement
   fontSize?: number;
   fontWeight?: number | string;
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  description: string;
+  url: string;          
+  coverImage: string;   
+  author: string;
+  source: string;        
+  publishedAt: string;   
+  readTime: string;      
+}

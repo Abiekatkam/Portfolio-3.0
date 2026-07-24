@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, type AnimationProps } from "motion/react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 interface AnimatedTextProps {
   children: React.ReactNode;

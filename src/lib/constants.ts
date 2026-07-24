@@ -1,9 +1,4 @@
-import EducationNMITDImage from "../assets/NMITD-home-picture.webp";
-import EducationGNIKImage from "../assets/GNIKS-hme-picture.webp";
-import EducationGNIKLogoImage from "../assets/GNIKS-logo-picture.webp";
-import EducationNMITDLogoImage from "../assets/NMITD-logo-picture..png";
-
-import type { EducationProps, MotivationQuote, WorkProps } from "./types";
+import type { BlogPost, EducationProps, WorkProps } from "./types";
 
 export const FIRSTNAME_DISPLAY: string = "Abhishek";
 export const FULLNAME_DISPLAY: string = "Abhishek Katkam";
@@ -51,7 +46,8 @@ export const EXERCISM_USERNAME: string = "Abiekat";
 export const GFG_URL: string = "https://auth.geeksforgeeks.org/user/Abiekat";
 export const GFG_USERNAME: string = "Abiekat";
 
-export const HACKERANK_URL: string = "https://www.hackerrank.com/profile/abhishekkatkam30";
+export const HACKERANK_URL: string =
+  "https://www.hackerrank.com/profile/abhishekkatkam30";
 export const HACKERANK_USERNAME: string = "abhishekkatkam30";
 
 export const workExperience: WorkProps[] = [
@@ -145,7 +141,7 @@ export const educationList: EducationProps[] = [
     degree: "Masters Degree",
     field: "Master of Computer Applications (MCA)",
     institution: "Navinchandra Mehta Institute of Technology and Development",
-    location: "Mumbai, Maharashtra",
+    location: "Mumbai, Maharashtra, India",
     locationUrl: "https://nmitd.edu.in/",
     in: "2024",
     out: "2026",
@@ -161,20 +157,18 @@ export const educationList: EducationProps[] = [
       "networking",
       "software programming",
     ],
-    images: [EducationNMITDLogoImage, EducationNMITDImage],
   },
   {
     degree: "Bachelor's Degree",
     field: "Bachelor Science in Information Technology",
     institution:
       "Guru Nanak Khalsa College of Arts, Science & Commerce (Autonomous)",
-    location: "Mumbai, Maharashtra",
+    location: "Mumbai, Maharashtra, India",
     locationUrl: "https://gnkhalsa.edu.in/",
     in: "2020",
     out: "2023",
     description:
       "Completed a Bachelor's degree in Information Technology with coursework in programming languages, database management, web development, and software engineering principles. Developed foundational skills in software development through academic projects and internships. Gained experience in various programming languages and tools, preparing for a career in the technology industry.",
-    images: [EducationGNIKLogoImage, EducationGNIKImage],
     skills: [
       "Cyber security",
       "IOT",
@@ -186,5 +180,85 @@ export const educationList: EducationProps[] = [
       "networking",
       "data structures and algorithms",
     ],
+  },
+];
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: "github-cost-of-saying-yes",
+    title: "The cost of saying yes has changed",
+    description:
+      "The cost of writing code dropped, but the cost of owning it didn't. A framework for figuring out which changes are genuinely cheap to ship in the AI era.",
+    url: "https://github.blog/engineering/the-cost-of-saying-yes-has-changed/",
+    coverImage:
+      "https://github.blog/wp-content/uploads/2025/11/GithubStockIllos_Sketch_ripple.jpg",
+    author: "Dalia Abuadas",
+    source: "The GitHub Blog",
+    publishedAt: "2026-07-17",
+    readTime: "6 min read",
+  },
+  {
+    id: "vercel-ship-2026-recap",
+    title: "Vercel Ship 2026 recap",
+    description:
+      "Over 2,500 people gathered in London for Vercel Ship 2026 to build on agentic infrastructure. A full recap of the keynote, new products like Vercel Connect and eve, and every session from the day.",
+    url: "https://vercel.com/blog/vercel-ship-2026-recap",
+    coverImage:
+      "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1QYTAAT1hR7NJAVlhZa4Ka/c30f439c60db019cfd2b52a1bb3e2ef0/ship-recap-og-ldn.png",
+    author: "Eric Dodds",
+    source: "Vercel Blog",
+    publishedAt: "2026-06-17",
+    readTime: "9 min read",
+  },
+  {
+    id: "stripe-selective-test-execution",
+    title: "Selective Test Execution at Stripe: Fast CI for a 50M-line Ruby monorepo",
+    description:
+      "How Stripe's Selective Test Execution system runs only about 5% of its test suite on average, keeping CI fast across a 50-million-line Ruby monorepo with over 100,000 test files.",
+    url: "https://stripe.dev/blog/selective-test-execution-at-stripe-fast-ci-for-a-50m-line-ruby-monorepo",
+    coverImage: "https://stripe.dev/dev_social.jpeg",
+    author: "Aditya Anchuri",
+    source: "Stripe Dot Dev Blog",
+    publishedAt: "2026-04-09",
+    readTime: "8 min read",
+  },
+  {
+    id: "cloudflare-precursor",
+    title: "Introducing Precursor: detecting agentic behavior with continuous client-side signals",
+    description:
+      "Cloudflare's new continuous behavioral validation engine for bot management gives visibility into how humans and bots actually behave across an entire session, not just at a single checkpoint.",
+    url: "https://blog.cloudflare.com/introducing-precursor/",
+    coverImage:
+      "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/4raPYKDa5ifslzx2izHKzA/4935a3d9476c0551f0d8f398663b2b9d/Introducing_Precursor-_detecting_agentic_behavior_with_continuous_client-side_signals-OG.png",
+    author: "Marina Elmore & Benedikt Wolters",
+    source: "The Cloudflare Blog",
+    publishedAt: "2026-07-13",
+    readTime: "7 min read",
+  },
+  {
+    id: "cupofjo-weekend-recap",
+    title: "What Did You Do This Weekend?",
+    description:
+      "A personal weekend recap from Cup of Jo's founder — a rainy Brooklyn magic shop, watching England play in the World Cup, and a running invitation for readers to share their own weekends in the comments.",
+    url: "https://cupofjo.com/2026/07/20/england-world-cup-weekend-recap/",
+    coverImage:
+      "https://cupofjo.com/wp-content/uploads/2026/07/IMG_2028-scaled-1.jpeg",
+    author: "Joanna Goddard",
+    source: "Cup of Jo",
+    publishedAt: "2026-07-20",
+    readTime: "3 min read",
+  },
+  {
+    id: "hbr-pause-before-acting-on-feedback",
+    title: "Leaders, Consider Pausing Before Acting on Employee Feedback",
+    description:
+      "A new study finds that when leaders change their behavior too quickly in response to employee feedback, it can come across as insincere. Gradual, well-communicated change reads as more authentic and keeps people willing to speak up in the future.",
+    url: "https://hbr.org/2026/02/leaders-pause-before-acting-on-employee-feedback",
+    coverImage:
+      "https://hbr.org/resources/images/article_assets/2026/02/Feb26_20_EliotWyatt.jpg",
+    author: "Danbee Chon & Francis J. Flynn",
+    source: "Harvard Business Review",
+    publishedAt: "2026-02-20",
+    readTime: "6 min read",
   },
 ];

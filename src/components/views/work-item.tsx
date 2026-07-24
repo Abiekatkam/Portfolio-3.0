@@ -71,7 +71,7 @@ function WorkItem({ work, onIntersect }: WorkItemProps) {
           <p className="text-lg">{work.company.name}</p>
         )}
 
-        <div className="text-xs font-bold text-neutral-500 space-y-1">
+        <div className="text-xs font-semibold text-neutral-500 space-y-1">
           <div>
             <DateDisplay
               dateString={inDate.toISOString()}
