@@ -208,4 +208,4 @@ function ProjectAccordion({ project }: { project: WorksProjectsProps }) {
   );
 }
 
-export default WorkItem; 
+export default WorkItem;

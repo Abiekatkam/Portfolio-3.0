@@ -83,3 +83,17 @@ export interface ProjectListProps {
   githubUrl?: string;
   featured?: boolean;
 }
+
+export interface PageNavigationProps {
+  previous?: {
+    title: string;
+    description: string;
+    href: string;
+  };
+
+  next?: {
+    title: string;
+    description: string;
+    href: string;
+  };
+}

@@ -2,10 +2,11 @@ import BorderCard from "../components/views/border-card";
 import AnimatedText from "../components/views/animated-text";
 import Footer from "../components/views/footer";
 import PreFooter from "../components/views/pre-footer";
-import { projectsList } from "../lib/constants";
+import { NavigationPages, projectsList } from "../lib/constants";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import type { ProjectListProps } from "@/lib/types";
+import type { ProjectListProps } from "../lib/types";
+import PageNavigation from "../components/views/page-navigation";
 
 const ProjectPage = () => {
   return (
@@ -26,17 +27,14 @@ const ProjectPage = () => {
           </p>
         </div>
       </div>
-       <div>
-          {projectsList.map((project, index) => (
-            <BorderCard key={project.id}>
-              <ProjectAccordion
-                project={project}
-                index={index + 1}
-              />
-            </BorderCard>
-          ))}
-        </div>
-      
+      <div>
+        {projectsList.map((project, index) => (
+          <BorderCard key={project.id}>
+            <ProjectAccordion project={project} index={index + 1} />
+          </BorderCard>
+        ))}
+      </div>
+      <PageNavigation previous={NavigationPages[1]} next={NavigationPages[3]} />
       <PreFooter />
       <Footer />
     </div>
@@ -48,10 +46,7 @@ interface ProjectAccordionProps {
   index: number;
 }
 
-function ProjectAccordion({
-  project,
-  index,
-}: ProjectAccordionProps) {
+function ProjectAccordion({ project, index }: ProjectAccordionProps) {
   const [open, setOpen] = useState(false);
 
   return (

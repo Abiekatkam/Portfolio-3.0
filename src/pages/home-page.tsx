@@ -7,18 +7,21 @@ import Footer from "../components/views/footer";
 import { Experience } from "../components/views/experience";
 import { Education } from "../components/views/education";
 import FeaturedActivites from "../components/views/featured-activities";
+import PageNavigation from "../components/views/page-navigation";
+import { NavigationPages } from "../lib/constants";
 
 const HomePage = () => {
   return (
     <div className="p-4 md:p-10">
       <HeroSection />
       <KnowledgeBase />
-      <FeaturedActivites/>
+      <FeaturedActivites />
       <ShortStory />
       {/* Projects */}
       <Experience />
       <Education />
       <CallToActions />
+      <PageNavigation next={NavigationPages[1]} />
       <PreFooter />
       <Footer />
     </div>

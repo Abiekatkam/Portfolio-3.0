@@ -2,7 +2,11 @@ import BorderCard from "../components/views/border-card";
 import Footer from "../components/views/footer";
 import PreFooter from "../components/views/pre-footer";
 import PollaroidProfileImage from "../assets/pollarroid-pic-3.jpeg";
-import { FULLNAME_DISPLAY, MORPHING_HEADLINE } from "../lib/constants";
+import {
+  FULLNAME_DISPLAY,
+  MORPHING_HEADLINE,
+  NavigationPages,
+} from "../lib/constants";
 import AnimatedText from "../components/views/animated-text";
 import { Link } from "react-router-dom";
 import {
@@ -28,6 +32,7 @@ import AnimatedContainer from "../components/views/animated-container";
 import { FeatureCard } from "../components/views/feature-card";
 import { MorphingText } from "../components/views/morphing-text";
 import ResumeButton from "../components/views/resume-button";
+import PageNavigation from "../components/views/page-navigation";
 
 const AboutPage = () => {
   const social_links = [
@@ -98,6 +103,19 @@ const AboutPage = () => {
 
   return (
     <div className="p-4 md:p-10">
+      <div className="max-w-7xl">
+        <div className="mb-10 w-full">
+          <h1 className="text-4xl font-bold font-Bricolage-Grotesque mb-1">
+            <AnimatedText className="font-bold">Beyond the Resume</AnimatedText>
+          </h1>
+
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            More than a list of skills and experiences—this is a glimpse into
+            how I think, what I value, and the journey that continues to shape
+            me as a software engineer.
+          </p>
+        </div>
+      </div>
       <BorderCard>
         <div className="max-w-7xl w-full flex sm:flex-row flex-col sm:gap-12">
           <div className="flex w-full items-center justify-center flex-col space-y-4">
@@ -183,6 +201,7 @@ const AboutPage = () => {
           </div>
         </div>
       </BorderCard>
+      <PageNavigation previous={NavigationPages[0]} next={NavigationPages[2]} />
       <PreFooter />
       <Footer />
     </div>

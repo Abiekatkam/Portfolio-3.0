@@ -3,11 +3,12 @@ import Footer from "../components/views/footer";
 import AnimatedText from "../components/routes/animated-text";
 import BorderCard from "../components/views/border-card";
 import AnimatedContainer from "../components/views/animated-container";
-import { blogPosts } from "../lib/constants";
+import { blogPosts, NavigationPages } from "../lib/constants";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
 import type { BlogPost } from "../lib/types";
 import { cn } from "../lib/utils";
+import PageNavigation from "../components/views/page-navigation";
 
 const BlogPage = () => {
   const [
@@ -21,22 +22,24 @@ const BlogPage = () => {
 
   return (
     <div className="p-4 md:p-10">
-      <BorderCard>
-        <div className="max-w-7xl">
-          <div className="mb-10 w-full">
-            <h1 className="text-4xl font-bold font-Bricolage-Grotesque mb-1">
-              <AnimatedText className="font-bold">
-                Engineering Insights
-              </AnimatedText>
-            </h1>
+      <div className="max-w-7xl">
+        <div className="mb-10 w-full">
+          <h1 className="text-4xl font-bold font-Bricolage-Grotesque mb-1">
+            <AnimatedText className="font-bold">
+              Engineering Insights
+            </AnimatedText>
+          </h1>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              A collection of technical deep dives, architectural decisions,
-              lessons learned, and practical guides on software engineering, AI,
-              distributed systems, and modern web development.
-            </p>
-          </div>
-          <AnimatedContainer className="flex flex-col gap-8">
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            A collection of technical deep dives, architectural decisions,
+            lessons learned, and practical guides on software engineering, AI,
+            distributed systems, and modern web development.
+          </p>
+        </div>
+      </div>
+      <BorderCard>
+        <div className="max-w-7xl ">
+          <AnimatedContainer className="flex flex-col gap-8 pt-10">
             <div className="relative flex h-[400px] flex-col gap-4 sm:flex-row">
               <FeaturedBlogCard post={featuredPost} />
 
@@ -70,7 +73,7 @@ const BlogPage = () => {
           </AnimatedContainer>
         </div>
       </BorderCard>
-
+      <PageNavigation previous={NavigationPages[2]} />
       <PreFooter />
       <Footer />
     </div>

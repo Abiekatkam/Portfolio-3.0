@@ -489,3 +489,28 @@ export const projectsList: ProjectListProps[] = [
     ],
   },
 ];
+
+export const NavigationPages = [
+  {
+    href: "/",
+    title: "Home",
+    description: "Overview of my work, experience, and technical expertise.",
+  },
+  {
+    href: "/about",
+    title: "About Me",
+    description: "My journey, values, technologies, and interests.",
+  },
+  {
+    href: "/project",
+    title: "Production Engineering",
+    description:
+      "Enterprise platforms, AI systems, and production software I've contributed to.",
+  },
+  {
+    href: "/blog",
+    title: "Engineering Insights",
+    description:
+      "Technical articles, engineering blogs, and industry learnings.",
+  },
+];
