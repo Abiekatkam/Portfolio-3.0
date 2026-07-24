@@ -35,7 +35,7 @@ const PolaroidFrame = ({ image }: { image: string }) => {
         <img
             src={PIN_IMAGE}
             alt="Push Pin"
-            className="w-16 h-16 object-cover grayscales contrast-125 brightness-90"
+            className="w-16 h-16 object-cover grayscales contrast-125 brightness-90 user-select-none pointer-events-none transition-transform duration-300 group-hover:scale-110"
           />
       </div>
 
@@ -45,7 +45,7 @@ const PolaroidFrame = ({ image }: { image: string }) => {
           <img
             src={image}
             alt="Portrait"
-            className="w-full h-full object-cover transition-all duration-300 contrast-125 brightness-90"
+            className="w-full h-full object-cover transition-all duration-300 contrast-125 brightness-90 *:group-hover:scale-110 user-select-none pointer-events-none"
           />
         </div>
       </div>

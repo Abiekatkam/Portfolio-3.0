@@ -1,5 +1,4 @@
 import { Home, FileText, ChevronDown, BookOpen, Briefcase } from "lucide-react";
-import { Button } from "../../components/ui/button";
 import { cn } from "../../lib/utils";
 import { Separator } from "../ui/separator";
 import { AnimatedThemeToggler } from "./animated-theme-toggler";
@@ -14,6 +13,7 @@ import {
   TWITTER_USERNAME,
 } from "../../lib/constants";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import ResumeButton from "./resume-button";
 
 const Navbar = () => {
   const location = useLocation();
@@ -127,14 +127,7 @@ const Navbar = () => {
         {/* Action Section */}
         <div className="flex items-center gap-2 md:gap-4">
           <AnimatedThemeToggler />
-          <Button
-            className={cn(
-              "rounded-full font-medium px-4 md:px-6 h-8 md:h-9 text-xs md:text-sm",
-              "transition-all active:scale-95 cursor-pointer",
-            )}
-          >
-            View Resume
-          </Button>
+          <ResumeButton />
         </div>
       </nav>
     </div>

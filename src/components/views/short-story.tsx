@@ -1,10 +1,47 @@
-import { FileText } from "lucide-react";
-import { cn } from "../../lib/utils";
-import { Button } from "../ui/button";
 import BorderCard from "./border-card";
 import PolaroidGallery from "./pollaroid-gallery";
+import {
+  GITHUB_URL,
+  GITHUB_USERNAME,
+  INSTAGRAM_URL,
+  INSTAGRAM_USERNAME,
+  LINKEDIN_URL,
+  LINKEDIN_USERNAME,
+  TWITTER_URL,
+  TWITTER_USERNAME,
+} from "../../lib/constants";
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import ResumeButton from "./resume-button";
 
 const ShortStory = () => {
+  const social_links = [
+    {
+      name: "Twitter profile",
+      label: TWITTER_USERNAME,
+      href: TWITTER_URL,
+      icon: FaXTwitter,
+    },
+    {
+      name: "Github profile",
+      label: GITHUB_USERNAME,
+      href: GITHUB_URL,
+      icon: FaGithub,
+    },
+    {
+      name: "LinkedIn profile",
+      label: LINKEDIN_USERNAME,
+      href: LINKEDIN_URL,
+      icon: FaLinkedin,
+    },
+    {
+      name: "Instagram profile",
+      label: INSTAGRAM_USERNAME,
+      href: INSTAGRAM_URL,
+      icon: FaInstagram,
+    },
+  ];
+
   return (
     <BorderCard>
       <div className="relative sm:py-10 py-8 flex w-full flex-col items-start justify-center">
@@ -42,16 +79,23 @@ const ShortStory = () => {
           excited to work on meaningful digital experiences.
         </p>
 
-        <div className="mt-8 max-w-2xl mx-auto w-full">
-          <Button
-            className={cn(
-              "rounded-full font-medium px-4 md:px-6 h-9 md:h-10 text-xs md:text-sm",
-              "transition-all active:scale-95 cursor-pointer",
-            )}
-          >
-            View My Resume
-            <FileText />
-          </Button>
+        <div className="mt-8 max-w-2xl flex items-center mx-auto w-full">
+          <div className="flex items-center gap-3 md:gap-4 px-1 md:px-2">
+            {social_links.map((link) => (
+              <Link
+                to={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+              >
+                <link.icon
+                  size={18}
+                  className="text-zinc-700 dark:text-zinc-300"
+                />
+              </Link>
+            ))}
+          </div>
+          <ResumeButton className="ml-auto" />
         </div>
       </div>
     </BorderCard>

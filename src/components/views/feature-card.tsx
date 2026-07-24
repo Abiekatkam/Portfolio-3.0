@@ -1,37 +1,32 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { Link } from "react-router-dom";
 
 type FeatureType = {
   title: string;
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  description: string;
-  username: string;
-  url: string;
+  description?: string;
+  username?: string;
+  url?: string;
+  tags?: string[];
 };
 
 type FeatureCardProps = React.ComponentProps<"a"> & {
   feature: FeatureType;
+  isLink?: boolean;
 };
 
 export function FeatureCard({
   feature,
   className,
+  isLink = true,
   ...props
 }: FeatureCardProps) {
   const p = genRandomPattern();
 
-  return (
-    <a
-      href={feature.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(
-        "group relative overflow-hidden p-6 transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-900",
-        className
-      )}
-      {...props}
-    >
+  const content = (
+    <>
       {/* Background Pattern */}
       <div className="pointer-events-none absolute top-0 left-1/2 -mt-2 -ml-20 h-full w-full [mask-image:linear-gradient(white,transparent)]">
         <div className="from-foreground/5 to-foreground/1 absolute inset-0 bg-gradient-to-r [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]">
@@ -54,26 +49,66 @@ export function FeatureCard({
 
       {/* Platform */}
       <div className="relative z-10 mt-8 flex items-center justify-between">
-        <h3 className="font-semibold text-lg">
-          {feature.title}
-        </h3>
+        <h3 className="text-lg font-semibold">{feature.title}</h3>
 
-        <ArrowUpRight
-          size={18}
-          className="transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1"
-        />
+        {isLink && (
+          <ArrowUpRight
+            size={18}
+            className="transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1"
+          />
+        )}
       </div>
 
       {/* Description */}
-      <p className="relative z-10 mt-2 text-sm text-muted-foreground">
-        {feature.description}
-      </p>
+      {feature.description && (
+        <p className="relative z-10 mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+          {feature.description}
+        </p>
+      )}
 
       {/* Username */}
-      <p className="relative z-10 mt-5 text-sm font-medium text-neutral-700 dark:text-neutral-300">
-        @{feature.username}
-      </p>
-    </a>
+      {feature.username && (
+        <p className="relative z-10 mt-5 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          @{feature.username}
+        </p>
+      )}
+
+      {/* Tags */}
+      {feature.tags && (
+        <div className="relative z-10 mt-4 flex flex-wrap gap-2">
+          {feature.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </>
+  );
+
+  const commonClassName = cn(
+    "group relative overflow-hidden p-6 transition-colors",
+    isLink && "hover:bg-neutral-50 dark:hover:bg-neutral-900 cursor-pointer",
+    className
+  );
+
+  if (!isLink) {
+    return <div className={commonClassName}>{content}</div>;
+  }
+
+  return (
+    <Link
+      to={feature.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={commonClassName}
+      {...props}
+    >
+      {content}
+    </Link>
   );
 }
 

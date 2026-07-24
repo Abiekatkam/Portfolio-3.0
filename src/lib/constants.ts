@@ -3,7 +3,7 @@ import type { BlogPost, EducationProps, WorkProps } from "./types";
 export const FIRSTNAME_DISPLAY: string = "Abhishek";
 export const FULLNAME_DISPLAY: string = "Abhishek Katkam";
 export const MAILTO_EMAILADDRESS: string = "mailto:abhishekkatkam30@gmail.com"; //"mailto:your-emailaddress@gmail.com"
-export const EMAILADDRESS: string = "abhishekkatkam30@gmail.com"; //"mailto:your-emailaddress@gmail.com"
+export const EMAILADDRESS: string = "abhishekkatkam30@gmail.com";
 
 export const RESUME_PDF_URL: string = "";
 export const RESUME_PDF_VIEW_URL: string = "";
@@ -182,7 +182,6 @@ export const educationList: EducationProps[] = [
     ],
   },
 ];
-
 export const blogPosts: BlogPost[] = [
   {
     id: "github-cost-of-saying-yes",
@@ -212,7 +211,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "stripe-selective-test-execution",
-    title: "Selective Test Execution at Stripe: Fast CI for a 50M-line Ruby monorepo",
+    title:
+      "Selective Test Execution at Stripe: Fast CI for a 50M-line Ruby monorepo",
     description:
       "How Stripe's Selective Test Execution system runs only about 5% of its test suite on average, keeping CI fast across a 50-million-line Ruby monorepo with over 100,000 test files.",
     url: "https://stripe.dev/blog/selective-test-execution-at-stripe-fast-ci-for-a-50m-line-ruby-monorepo",
@@ -223,42 +223,60 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
   },
   {
-    id: "cloudflare-precursor",
-    title: "Introducing Precursor: detecting agentic behavior with continuous client-side signals",
+    id: "shopify-generative-recommender",
+    title: "The generative recommender behind Shopify's commerce engine",
     description:
-      "Cloudflare's new continuous behavioral validation engine for bot management gives visibility into how humans and bots actually behave across an entire session, not just at a single checkpoint.",
-    url: "https://blog.cloudflare.com/introducing-precursor/",
+      "How Shopify built a foundational generative recommender that reads full buyer-journey sequences instead of simplified signals — covering time-aware attention, negative sampling, and a 7.3x training speedup that shipped measurable lifts in production.",
+    url: "https://shopify.engineering/generative-recommendations",
     coverImage:
-      "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/4raPYKDa5ifslzx2izHKzA/4935a3d9476c0551f0d8f398663b2b9d/Introducing_Precursor-_detecting_agentic_behavior_with_continuous_client-side_signals-OG.png",
-    author: "Marina Elmore & Benedikt Wolters",
-    source: "The Cloudflare Blog",
-    publishedAt: "2026-07-13",
+      "https://cdn.shopify.com/b/shopify-brochure2-assets/5187ead989e126b17ddd855e0a4888ff.png",
+    author: "Yang Liu & Ali Khanafer",
+    source: "Shopify Engineering",
+    publishedAt: "2026-02-25",
     readTime: "7 min read",
   },
   {
-    id: "cupofjo-weekend-recap",
-    title: "What Did You Do This Weekend?",
+    id: "mindbodygreen-strength-training-guide",
+    title:
+      "Your Complete Guide To Strength Training — Built For Women, Backed By Experts",
     description:
-      "A personal weekend recap from Cup of Jo's founder — a rainy Brooklyn magic shop, watching England play in the World Cup, and a running invitation for readers to share their own weekends in the comments.",
-    url: "https://cupofjo.com/2026/07/20/england-world-cup-weekend-recap/",
+      "Four experts — a physical therapist, a behavior analyst, a Pilates instructor, and a celebrity trainer — break down the myths, the science of muscle growth, and a simple framework for building a sustainable strength practice at any age.",
+    url: "https://www.mindbodygreen.com/articles/complete-guide-to-strength-training-for-women",
     coverImage:
-      "https://cupofjo.com/wp-content/uploads/2026/07/IMG_2028-scaled-1.jpeg",
-    author: "Joanna Goddard",
-    source: "Cup of Jo",
-    publishedAt: "2026-07-20",
-    readTime: "3 min read",
+      "https://mindbodygreen-res.cloudinary.com/image/upload/c_fill,w_2000,h_1200,g_auto,fl_lossy,f_jpg/org/1782443415584_ik4t6ndw8mk.jpg",
+    author: "Ava Durgin",
+    source: "mindbodygreen",
+    publishedAt: "2026-07-18",
+    readTime: "10 min read",
   },
   {
-    id: "hbr-pause-before-acting-on-feedback",
-    title: "Leaders, Consider Pausing Before Acting on Employee Feedback",
+    id: "psychologytoday-trust-mental-health-advice",
+    title: "Can You Trust the Mental Health Advice You're Reading?",
     description:
-      "A new study finds that when leaders change their behavior too quickly in response to employee feedback, it can come across as insincere. Gradual, well-communicated change reads as more authentic and keeps people willing to speak up in the future.",
-    url: "https://hbr.org/2026/02/leaders-pause-before-acting-on-employee-feedback",
+      "We correctly spot AI-generated text only 57% of the time. A psychologist who specializes in mental health communication shares the concrete signals — vague language, unlinked citations, stacked metaphors — worth learning to recognize before you trust what you read.",
+    url: "https://www.psychologytoday.com/us/blog/cell-on-the-self/202607/can-you-trust-the-mental-health-advice-youre-reading",
     coverImage:
-      "https://hbr.org/resources/images/article_assets/2026/02/Feb26_20_EliotWyatt.jpg",
-    author: "Danbee Chon & Francis J. Flynn",
-    source: "Harvard Business Review",
-    publishedAt: "2026-02-20",
-    readTime: "6 min read",
+      "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2026-07/karl-moore-iqacwnv-ejg-unsplash.jpg",
+    author: "Laura Bilbao Broch",
+    source: "Psychology Today",
+    publishedAt: "2026-07-23",
+    readTime: "5 min read",
   },
+];
+
+export const MORPHING_HEADLINE: string[] = [
+  "Fuelled by Curiosity",
+  "Gym Mode: Activated",
+  "Caffeine + Code = Me",
+  "Creative by Day, Designer by Passion",
+  "Building the Future, One Commit at a Time",
+  "Self-Taught, Never Self-Satisfied",
+  "Typing My Way Through Innovation",
+  "Debugging Life & Code",
+  "From Idea to Deployment",
+  "Full Stack. Full Passion.",
+  "Pixels, Logic & Gains",
+  "Lifting Reps & React Components",
+  "Dreaming in Code",
+  "Turning Concepts into Code",
 ];
