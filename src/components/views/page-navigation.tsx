@@ -1,6 +1,5 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import BorderCard from "./border-card";
 
 interface NavigationItem {
   title: string;
