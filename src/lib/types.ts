@@ -12,6 +12,7 @@ export interface WorkProps {
 }
 
 export interface WorksProjectsProps {
+  id?: string;
   name: string;
   description: string;
 
@@ -25,12 +26,6 @@ export interface WorksProjectsProps {
     name: string;
     url: string;
   }[];
-}
-
-export interface MotivationQuote {
-  id: number;
-  sanskrit: string;
-  english: string;
 }
 
 export interface EducationProps {
@@ -50,7 +45,7 @@ export interface FlickeringGridProps extends React.HTMLAttributes<HTMLDivElement
   squareSize?: number;
   gridGap?: number;
   flickerChance?: number;
-  color?: string; // Can be any valid CSS color including hex, rgb, rgba, hsl, var(--color)
+  color?: string; 
   width?: number;
   height?: number;
   className?: string;
@@ -71,4 +66,20 @@ export interface BlogPost {
   source: string;        
   publishedAt: string;   
   readTime: string;      
+}
+
+
+export interface ProjectListProps {
+  id: string;
+  title: string;
+  category: string;
+  duration?: string;
+  overview: string;
+  contributions: string[];
+  technologies: string[];
+  impact: string[];
+  coverImage?: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  featured?: boolean;
 }

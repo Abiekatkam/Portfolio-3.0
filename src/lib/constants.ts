@@ -1,4 +1,9 @@
-import type { BlogPost, EducationProps, WorkProps } from "./types";
+import type {
+  BlogPost,
+  EducationProps,
+  ProjectListProps,
+  WorkProps,
+} from "./types";
 
 export const FIRSTNAME_DISPLAY: string = "Abhishek";
 export const FULLNAME_DISPLAY: string = "Abhishek Katkam";
@@ -56,7 +61,7 @@ export const workExperience: WorkProps[] = [
     in: "2025-04-01",
     out: "",
     description:
-      "Architected scalable microservices-based applications using Node.js, ASP.NET Core, Redis, and BullMQ for asynchronous processing and modular backend workflows. Designed and executed AI-powered RAG pipelines and LLM-integrated chat systems enabling contextual search and workflow automation. Built real-time communication systems using WebSockets and event-driven architecture for live dashboards and chat-based applications. Optimized PostgreSQL queries, Redis caching layers, and background job queues improving API performance and backend throughput. Improved and deployed cloud-native services on AWS and Supabase with focus on scalability, fault tolerance, and deployment consistency using Docker.",
+      "Architected scalable microservices-based applications using Node.js, ASP.NET Core, Redis, and BullMQ for asynchronous processing and modular backend workflows. Designed and implemented AI-powered Retrieval-Augmented Generation (RAG) pipelines, LLM-integrated applications, and cloud-native services while improving backend scalability, performance, and deployment reliability across AWS infrastructure.",
 
     company: {
       name: "Prudence Analytics & Software Solution",
@@ -65,17 +70,21 @@ export const workExperience: WorkProps[] = [
 
     projects: [
       {
-        name: "AI-Powered RAG & Workflow Automation Platform",
+        id: "ai-cxm-platform",
+        name: "AI-Powered Customer Experience Platform",
         description:
-          "Designed contextual search systems using Retrieval-Augmented Generation (RAG), LLM integrations, Redis caching, BullMQ job queues, and AWS infrastructure to automate workflows and improve operational efficiency.",
+          "Designed and developed enterprise AI workflows including presentation generation, semantic search, workflow automation, Redis caching, Milvus vector search, and full-stack application development.",
+        started: "Apr 2025",
+        active: true,
+      },
+      {
+        id: "rag-document-platform",
+        name: "RAG Document Intelligence Platform",
+        description:
+          "Built Retrieval-Augmented Generation (RAG) pipelines enabling enterprise users to search and interact with internal documents using natural language and contextual AI responses.",
         started: "May 2025",
         active: true,
       },
-    ],
-
-    images: [
-      "https://res.cloudinary.com/dxfq3iotg/image/upload/v1697040867/portfolio/konnect-insights/konnect-insights-1.png",
-      "https://res.cloudinary.com/dxfq3iotg/image/upload/v1697040867/portfolio/konnect-insights/konnect-insights-2.png",
     ],
   },
 
@@ -84,7 +93,7 @@ export const workExperience: WorkProps[] = [
     in: "2024-04-01",
     out: "2025-04-01",
     description:
-      "Enhanced AI-assisted chat query workflows reducing manual campaign configuration effort and improving operational efficiency. Built reusable frontend modules using React.js and Next.js with optimized state management using Redux and Zustand. Developed scalable backend services using Node.js, Redis, and BullMQ for asynchronous task processing and queue-based workflows. Improved cloud deployment reliability and backend availability through AWS infrastructure enhancements and CI/CD workflows.",
+      "Developed scalable backend services and reusable frontend modules while automating enterprise workflows. Focused on asynchronous processing, cloud deployment, performance optimization, and modern full-stack application development using React, Node.js, Redis, BullMQ, and AWS.",
 
     company: {
       name: "Prudence Analytics & Software Solution",
@@ -93,11 +102,21 @@ export const workExperience: WorkProps[] = [
 
     projects: [
       {
-        name: "Campaign Automation & AI Chat Assistant",
+        id: "media-automation-engine",
+        name: "Automated Media Publishing Engine",
         description:
-          "Enhanced AI-assisted campaign management workflows by developing intelligent chat-based systems, reusable frontend modules, and scalable backend services for asynchronous processing.",
-        started: "May 2024",
-        ended: "May 2025",
+          "Developed queue-based automation services for scheduling and publishing enterprise media content using asynchronous workflows.",
+        started: "Apr 2024",
+        ended: "Apr 2025",
+        active: false,
+      },
+      {
+        id: "enterprise-cms",
+        name: "Enterprise Content Management System",
+        description:
+          "Developed internal CMS modules including dashboards, authentication, role-based access control, and reusable CRUD components for operational workflows.",
+        started: "Jul 2024",
+        ended: "Apr 2025",
         active: false,
       },
     ],
@@ -108,7 +127,7 @@ export const workExperience: WorkProps[] = [
     in: "2023-04-01",
     out: "2024-04-01",
     description:
-      "Improved SQL stored procedures and backend query execution for large-scale reporting and analytics workflows. Migrated legacy ASPX modules to modern React.js and Node.js architecture with JWT-based authentication. Developed integrations with external APIs including Meta and Twitter to improve data aggregation workflows. Built AI-driven sentiment analysis modules using Python and ASP.NET MVC for analytics dashboard insights.",
+      "Modernized legacy applications by migrating ASP.NET Web Forms modules to React-based interfaces, improving backend performance through MySQL optimization, integrating external APIs, and contributing to AI-driven analytics features.",
 
     company: {
       name: "Prudence Analytics & Software Solution",
@@ -117,19 +136,12 @@ export const workExperience: WorkProps[] = [
 
     projects: [
       {
-        name: "Sentiment Analytics Platform",
+        id: "social-media-publishing",
+        name: "Social Media Publishing Platform",
         description:
-          "Developed AI-powered sentiment analysis modules using Python and ASP.NET MVC while integrating external platforms such as Meta and Twitter to enhance analytics and reporting capabilities.",
-        started: "May 2023",
-        ended: "May 2024",
-        active: false,
-      },
-      {
-        name: "Sentiment Analytics Platform",
-        description:
-          "Developed AI-powered sentiment analysis modules using Python and ASP.NET MVC while integrating external platforms such as Meta and Twitter to enhance analytics and reporting capabilities.",
-        started: "May 2023",
-        ended: "May 2024",
+          "Redesigned the publishing module, optimized MySQL stored procedures, improved backend performance, and enhanced the overall publishing experience.",
+        started: "Apr 2023",
+        ended: "Apr 2024",
         active: false,
       },
     ],
@@ -182,6 +194,7 @@ export const educationList: EducationProps[] = [
     ],
   },
 ];
+
 export const blogPosts: BlogPost[] = [
   {
     id: "github-cost-of-saying-yes",
@@ -236,30 +249,44 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
   },
   {
-    id: "mindbodygreen-strength-training-guide",
+    id: "aws-cloudformation-express-mode",
     title:
-      "Your Complete Guide To Strength Training — Built For Women, Backed By Experts",
+      "Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode",
     description:
-      "Four experts — a physical therapist, a behavior analyst, a Pilates instructor, and a celebrity trainer — break down the myths, the science of muscle growth, and a simple framework for building a sustainable strength practice at any age.",
-    url: "https://www.mindbodygreen.com/articles/complete-guide-to-strength-training-for-women",
+      "A new CloudFormation deployment mode that completes stack operations as soon as resource configuration is applied instead of waiting on full stabilization — cutting deployment time up to 4x for developers and AI agents iterating on infrastructure.",
+    url: "https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/",
     coverImage:
-      "https://mindbodygreen-res.cloudinary.com/image/upload/c_fill,w_2000,h_1200,g_auto,fl_lossy,f_jpg/org/1782443415584_ik4t6ndw8mk.jpg",
-    author: "Ava Durgin",
-    source: "mindbodygreen",
-    publishedAt: "2026-07-18",
-    readTime: "10 min read",
+      "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/06/29/aws-cloudformation-express-2.jpg",
+    author: "Channy Yun",
+    source: "AWS News Blog",
+    publishedAt: "2026-06-30",
+    readTime: "5 min read",
   },
   {
-    id: "psychologytoday-trust-mental-health-advice",
-    title: "Can You Trust the Mental Health Advice You're Reading?",
+    id: "google-gemini-managed-agents-expansion",
+    title:
+      "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
     description:
-      "We correctly spot AI-generated text only 57% of the time. A psychologist who specializes in mental health communication shares the concrete signals — vague language, unlinked citations, stacked metaphors — worth learning to recognize before you trust what you read.",
-    url: "https://www.psychologytoday.com/us/blog/cell-on-the-self/202607/can-you-trust-the-mental-health-advice-youre-reading",
+      "New capabilities for Managed Agents in the Gemini API — long-running background execution, remote MCP server integration, custom function calling alongside sandbox tools, and network credential refresh — for building reliable, production-ready agents.",
+    url: "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
     coverImage:
-      "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2026-07/karl-moore-iqacwnv-ejg-unsplash.jpg",
-    author: "Laura Bilbao Broch",
-    source: "Psychology Today",
-    publishedAt: "2026-07-23",
+      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_launch.width-1300.png",
+    author: "Philipp Schmid & Mariano Cocirio",
+    source: "Google Developers Blog",
+    publishedAt: "2026-07-07",
+    readTime: "5 min read",
+  },
+  {
+    id: "anthropic-ai-native-sdlc-security",
+    title: "How Anthropic secures its AI-native software development lifecycle",
+    description:
+      "Anthropic's Deputy CISO details how the Security Engineering team hardens a software development lifecycle where Claude authors about 80% of merged code — covering plan, code, CI, deploy, and monitor stages of an AI-native SDLC.",
+    url: "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle",
+    coverImage:
+      "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a5faa4b748d179725b5376e_og_how-anthropic-secures-its-ai-native-software-development-lifecycle.jpg",
+    author: "Jason Clinton",
+    source: "Claude by Anthropic",
+    publishedAt: "2026-07-21",
     readTime: "5 min read",
   },
 ];
@@ -279,4 +306,186 @@ export const MORPHING_HEADLINE: string[] = [
   "Lifting Reps & React Components",
   "Dreaming in Code",
   "Turning Concepts into Code",
+];
+
+export const projectsList: ProjectListProps[] = [
+  {
+    id: "ai-cxm-platform",
+    title: "AI-Powered Customer Experience Platform",
+    category: "AI • Full Stack • Enterprise Platform",
+    duration: "2025 - Present",
+    featured: true,
+
+    overview:
+      "Designed and developed an enterprise AI-powered Customer Experience Management platform that streamlines business workflows through intelligent content generation, conversational AI, document processing, and modern user experiences.",
+
+    contributions: [
+      "Designed and implemented responsive frontend interfaces using React.",
+      "Developed scalable backend APIs using ASP.NET Core and Node.js.",
+      "Integrated Gamma API for automated presentation generation.",
+      "Built AI-assisted workflow automation modules.",
+      "Implemented Redis caching for improved application performance.",
+      "Worked with Milvus vector database for semantic search capabilities.",
+      "Developed dynamic rich UI generation components.",
+      "Integrated multiple LLM-powered workflows.",
+      "Collaborated across frontend, backend, and AI teams throughout the project lifecycle.",
+    ],
+
+    technologies: [
+      "React",
+      "ASP.NET Core",
+      "Node.js",
+      "Redis",
+      "Milvus",
+      "LLMs",
+      "Gamma API",
+      "MySql Server",
+      "Docker",
+      "AWS",
+      "Hugging Face APIs",
+    ],
+
+    impact: [
+      "Automated business workflows using AI.",
+      "Reduced manual presentation creation.",
+      "Improved customer engagement through intelligent automation.",
+    ],
+  },
+
+  {
+    id: "rag-document-platform",
+    title: "RAG Document Intelligence Platform",
+    category: "AI • Retrieval-Augmented Generation",
+    duration: "2025 - Present",
+    featured: true,
+
+    overview:
+      "Built an AI-powered document intelligence platform enabling enterprise users to query internal knowledge bases using natural language through Retrieval-Augmented Generation (RAG).",
+
+    contributions: [
+      "Developed document ingestion pipelines.",
+      "Implemented document chunking and preprocessing.",
+      "Integrated embedding generation workflows.",
+      "Built semantic search APIs.",
+      "Integrated LLM-based contextual responses.",
+      "Implemented Redis caching.",
+      "Developed backend APIs.",
+      "Integrated PostgreSQL storage.",
+    ],
+
+    technologies: [
+      "React",
+      "ASP.NET Core",
+      "Node.js",
+      "Redis",
+      "MySQL Server",
+      "Docker",
+      "RAG",
+      "LLMs",
+      "Python",
+      "Vector Search",
+    ],
+
+    impact: [
+      "Reduced document search time significantly.",
+      "Improved internal knowledge accessibility.",
+      "Delivered accurate context-aware AI responses.",
+    ],
+  },
+
+  {
+    id: "social-media-publishing",
+    title: "Social Media Publishing Platform",
+    category: "Full Stack • Performance Optimization",
+    duration: "2023 - Present",
+
+    overview:
+      "Modernized the organization's social media publishing module by redesigning the user interface, optimizing backend processes, and improving database performance.",
+
+    contributions: [
+      "Redesigned the complete publishing module UI.",
+      "Improved user experience and usability.",
+      "Optimized MySQL stored procedures.",
+      "Improved database query performance.",
+      "Enhanced API response times.",
+      "Resolved multiple legacy performance bottlenecks.",
+    ],
+
+    technologies: [
+      "React",
+      "ASP.NET MVC",
+      "MySQL",
+      "Stored Procedures",
+      "JavaScript",
+      "Bootstrap",
+      "AWS S3",
+    ],
+
+    impact: [
+      "Improved publishing workflow efficiency.",
+      "Reduced database execution time.",
+      "Enhanced overall user experience.",
+    ],
+  },
+
+  {
+    id: "media-automation-engine",
+    title: "Automated Media Publishing Engine",
+    category: "Backend • Workflow Automation",
+    duration: "2024 - 2025",
+
+    overview:
+      "Developed an automated publishing engine that schedules and publishes media content for enterprise clients across supported social platforms.",
+
+    contributions: [
+      "Built scheduling workflows.",
+      "Developed asynchronous processing services.",
+      "Implemented queue-based architecture.",
+      "Integrated multiple publishing APIs.",
+      "Added retry mechanisms for failed jobs.",
+      "Improved monitoring and logging.",
+    ],
+
+    technologies: [
+      "Node.js",
+      "Redis",
+      "BullMQ",
+      "AWS",
+      "REST APIs",
+      "Express.js",
+    ],
+
+    impact: [
+      "Reduced manual publishing effort.",
+      "Improved publishing reliability.",
+      "Automated client media workflows.",
+    ],
+  },
+
+  {
+    id: "enterprise-cms",
+    title: "Enterprise Content Management System",
+    category: "Internal Platform • Full Stack",
+    duration: "2024 - 2025",
+
+    overview:
+      "Developed and maintained an internal content management system to simplify operational workflows, improve collaboration, and centralize business operations.",
+
+    contributions: [
+      "Developed full-stack modules.",
+      "Built secure authentication workflows.",
+      "Implemented role-based access control.",
+      "Created reusable CRUD modules.",
+      "Designed operational dashboards.",
+      "Optimized backend APIs.",
+    ],
+
+    technologies: ["ASP.NET Core", "React", "MySQL Server", "Redis", "Docker", "Zustand", "Tailwind CSS"],
+
+    impact: [
+      "Improved operational efficiency.",
+      "Reduced manual administrative work.",
+      "Centralized internal business operations.",
+    ],
+  },
 ];
