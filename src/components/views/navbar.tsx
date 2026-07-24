@@ -81,7 +81,7 @@ const Navbar = () => {
                 const SectionIcon = section.icon;
                 return (
                   <Link
-                    key={section.path}
+                    key={section.label}
                     to={section.path}
                     onClick={() => setIsDropdownOpen(false)}
                     className={cn(
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3 md:gap-4 px-1 md:px-2">
           {social_links.map((link) => (
             <Link
-              to={link.href}
+              to={link.name}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-70 transition-opacity"
@@ -127,7 +127,7 @@ const Navbar = () => {
         {/* Action Section */}
         <div className="flex items-center gap-2 md:gap-4">
           <AnimatedThemeToggler />
-          <ResumeButton />
+          <ResumeButton isFileIconVisible={false} />
         </div>
       </nav>
     </div>

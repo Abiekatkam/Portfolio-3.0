@@ -1,6 +1,6 @@
  const Footer = () => {
   return (
-    <div className="max-w-7xl w-full relative py-12 px-4 sm:px-8 md:px-16 h-70 flex flex-col justify-end">
+    <div className="max-w-7xl w-full relative sm:py-12 pt-10 pb-4 px-4 sm:px-8 md:px-16 sm:h-70 flex flex-col justify-end">
       <div
         className="bg-gradient-to-b font-Bricolage-Grotesque from-foreground/20 via-foreground/10 to-transparent bg-clip-text text-transparent leading-none absolute left-1/2 -translate-x-1/2 font-extrabold tracking-tighter pointer-events-none select-none text-center px-4"
         style={{

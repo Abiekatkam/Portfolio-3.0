@@ -39,35 +39,51 @@ const BlogPage = () => {
       </div>
       <BorderCard>
         <div className="max-w-7xl ">
-          <AnimatedContainer className="flex flex-col gap-8 pt-10">
-            <div className="relative flex h-[400px] flex-col gap-4 sm:flex-row">
-              <FeaturedBlogCard post={featuredPost} />
+          <AnimatedContainer className="flex flex-col gap-8 sm:pt-10">
+            {/* Mobile */}
+            <div className="flex flex-col gap-4 sm:hidden">
+              <FeaturedBlogCard post={featuredPost} className="h-[300px]" />
+
+              <StandardBlogCard
+                post={sideTopPost}
+                className="h-[260px] sm:col-span-1"
+              />
+
+              <StandardBlogCard
+                post={sideBottomPost}
+                className="h-[260px] sm:col-span-1"
+              />
+            </div>
+
+            {/* Desktop */}
+            <div className="relative hidden h-[400px] sm:flex">
+              <FeaturedBlogCard post={featuredPost} className="w-[72%]" />
 
               <CompactBlogCard
                 post={sideTopPost}
-                className="absolute -top-12 right-0 h-[45%] w-full sm:w-1/4"
+                className="absolute -top-12 right-0 h-[45%] w-1/4"
               />
 
               <CompactBlogCard
                 post={sideBottomPost}
-                className="absolute bottom-0 right-0 h-[60%] w-full sm:w-1/4"
+                className="absolute bottom-0 right-0 h-[60%] w-1/4"
               />
             </div>
 
-            <div className="flex h-[300px] flex-col gap-8 sm:flex-row">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-4">
               <StandardBlogCard
                 post={bottomLeftPost}
-                className="w-full sm:w-[24%]"
+                className="h-[260px] sm:col-span-1"
               />
 
               <StandardBlogCard
                 post={bottomMiddlePost}
-                className="w-full sm:w-[24%]"
+                className="h-[260px] sm:col-span-1"
               />
 
               <StandardBlogCard
                 post={bottomRightPost}
-                className="w-full sm:w-[48%]"
+                className="h-[260px] sm:col-span-2"
               />
             </div>
           </AnimatedContainer>
@@ -80,12 +96,21 @@ const BlogPage = () => {
   );
 };
 
-function FeaturedBlogCard({ post }: { post: BlogPost }) {
+function FeaturedBlogCard({
+  post,
+  className,
+}: {
+  post: BlogPost;
+  className?: string;
+}) {
   return (
     <Link
       to={post.url}
       target="_blank"
-      className="group relative w-full sm:w-[72%] overflow-hidden rounded-xl border shadow"
+      className={cn(
+        "group relative overflow-hidden rounded-2xl border shadow",
+        className,
+      )}
     >
       <img
         src={post.coverImage}
@@ -93,21 +118,29 @@ function FeaturedBlogCard({ post }: { post: BlogPost }) {
         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
 
-      <div className="absolute top-6 left-6 flex flex-col gap-2 text-zinc-900">
-        <span className="rounded-lg bg-white/70 px-2 py-1 text-sm font-semibold">
-          {post.source}
-        </span>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
-        <span className="w-fit rounded-lg bg-white/40 px-2 py-1 text-xs font-semibold">
-          {post.author}
+      <div className="absolute top-4 left-4 flex items-center gap-2">
+        <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-zinc-900">
+          {post.source}
         </span>
       </div>
 
-      <h2 className="absolute bottom-6 left-6 rounded-2xl bg-white text-zinc-900 font-Bricolage-Grotesque capitalize p-3 text-lg font-semibold">
-        {post.title}
-      </h2>
+      <div className="absolute bottom-4 left-4 right-4">
+        <p className="mb-2 text-xs text-white/70">{post.author}</p>
 
-      <ArrowRightIcon className="absolute top-6 right-6 rounded-full bg-white p-6 text-zinc-900 transition-transform group-hover:rotate-12" />
+        <h2 className="line-clamp-2 font-Bricolage-Grotesque text-xl capitalize font-bold text-white">
+          {post.title}
+        </h2>
+
+        <div className="mt-4 flex items-center justify-between">
+          <span className="text-xs text-white/70">{post.readTime}</span>
+
+          <ArrowRightIcon
+            className="text-zinc-200 transition-transform group-hover:translate-x-1"
+          />
+        </div>
+      </div>
     </Link>
   );
 }

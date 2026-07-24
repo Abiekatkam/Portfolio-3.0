@@ -223,19 +223,6 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
   },
   {
-    id: "stripe-selective-test-execution",
-    title:
-      "Selective Test Execution at Stripe: Fast CI for a 50M-line Ruby monorepo",
-    description:
-      "How Stripe's Selective Test Execution system runs only about 5% of its test suite on average, keeping CI fast across a 50-million-line Ruby monorepo with over 100,000 test files.",
-    url: "https://stripe.dev/blog/selective-test-execution-at-stripe-fast-ci-for-a-50m-line-ruby-monorepo",
-    coverImage: "https://stripe.dev/dev_social.jpeg",
-    author: "Aditya Anchuri",
-    source: "Stripe Dot Dev Blog",
-    publishedAt: "2026-04-09",
-    readTime: "8 min read",
-  },
-  {
     id: "shopify-generative-recommender",
     title: "The generative recommender behind Shopify's commerce engine",
     description:
@@ -247,20 +234,6 @@ export const blogPosts: BlogPost[] = [
     source: "Shopify Engineering",
     publishedAt: "2026-02-25",
     readTime: "7 min read",
-  },
-  {
-    id: "aws-cloudformation-express-mode",
-    title:
-      "Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode",
-    description:
-      "A new CloudFormation deployment mode that completes stack operations as soon as resource configuration is applied instead of waiting on full stabilization — cutting deployment time up to 4x for developers and AI agents iterating on infrastructure.",
-    url: "https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/",
-    coverImage:
-      "https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2026/06/29/aws-cloudformation-express-2.jpg",
-    author: "Channy Yun",
-    source: "AWS News Blog",
-    publishedAt: "2026-06-30",
-    readTime: "5 min read",
   },
   {
     id: "google-gemini-managed-agents-expansion",
@@ -288,6 +261,19 @@ export const blogPosts: BlogPost[] = [
     source: "Claude by Anthropic",
     publishedAt: "2026-07-21",
     readTime: "5 min read",
+  },
+  {
+    id: "stripe-selective-test-execution",
+    title:
+      "Selective Test Execution at Stripe: Fast CI for a 50M-line Ruby monorepo",
+    description:
+      "How Stripe's Selective Test Execution system runs only about 5% of its test suite on average, keeping CI fast across a 50-million-line Ruby monorepo with over 100,000 test files.",
+    url: "https://stripe.dev/blog/selective-test-execution-at-stripe-fast-ci-for-a-50m-line-ruby-monorepo",
+    coverImage: "https://stripe.dev/dev_social.jpeg",
+    author: "Aditya Anchuri",
+    source: "Stripe Dot Dev Blog",
+    publishedAt: "2026-04-09",
+    readTime: "8 min read",
   },
 ];
 

@@ -29,19 +29,18 @@ const PreFooter = () => {
       <span
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-20 bg-zinc-50 dark:bg-zinc-900 rounded-xl"
-      >
-        <img
-          src={CAT_IMAGE}
-          alt="cat img"
-          className="absolute bottom-0 inset-0 h-full w-full rounded-lg object-cover object-center brightness-[0.6]"
-        />
-      </span>
-      <h1 className="relative z-10 font-Bricolage-Grotesque text-3xl sm:text-5xl tracking-tighter leading-none mb-6 flex items-center gap-2">
+      ></span>
+      <img
+        src={CAT_IMAGE}
+        alt="cat img"
+        className="-my-12 sm:my-0 sm:absolute sm:bottom-0 inset-0 sm:h-full sm:w-full rounded-lg sm:object-cover sm:object-center brightness-[0.6]"
+      />
+      <h1 className="relative z-10 font-Bricolage-Grotesque text-4xl sm:text-5xl tracking-tighter leading-none mb-6 flex items-center gap-2 text-center sm:text-start">
         Thanks for watching!
-        <HiOutlineSparkles />
+        <HiOutlineSparkles className="hidden sm:block" />
       </h1>
 
-      <div className="sm:max-w-lg flex flex-wrap flex-col sm:flex-row gap-4">
+      <div className="sm:max-w-lg flex flex-wrap items-center sm:items-start flex-col sm:flex-row gap-4">
         <Badge
           variant="secondary"
           className="bg-[#e8f5e9] text-[#2e7d32] border-none px-5 py-3.5 rounded-full text-sm font-medium flex items-center gap-2 w-fit capitalize"

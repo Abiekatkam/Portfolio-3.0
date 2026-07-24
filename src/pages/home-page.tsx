@@ -17,7 +17,6 @@ const HomePage = () => {
       <KnowledgeBase />
       <FeaturedActivites />
       <ShortStory />
-      {/* Projects */}
       <Experience />
       <Education />
       <CallToActions />

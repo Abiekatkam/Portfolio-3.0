@@ -37,7 +37,7 @@ const FeaturedActivities = () => {
           Featured Activities
         </h1>
 
-        <div className="mt-10">
+        <div className="mt-10 hidden sm:block">
           <GithubContributions />
         </div>
 
