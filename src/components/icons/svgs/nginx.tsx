@@ -1,4 +1,4 @@
-import { SVGProps } from 'react'
+import { type SVGProps } from 'react'
 
 export function NginxIcon(props: SVGProps<SVGSVGElement>) {
   return (

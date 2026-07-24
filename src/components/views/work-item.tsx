@@ -103,7 +103,7 @@ function WorkItem({ work, onIntersect }: WorkItemProps) {
           {work.description}
         </div>
 
-        {work?.projects?.length > 0 && (
+        {work?.projects && work?.projects?.length > 0 && (
           <>
             <span className="font-semibold uppercase text-xs text-neutral-500 dark:text-neutral-300 block">
               Projects

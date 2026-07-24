@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, type AnimationProps } from "motion/react";
+import { motion } from "motion/react";
 import { cn } from "../../lib/utils";
 
 interface AnimatedTextProps {
@@ -7,7 +7,7 @@ interface AnimatedTextProps {
   className?: string;
 }
 
-const animationProps = {
+const animationProps: React.ComponentProps<typeof motion.span> = {
   initial: { "--x": "100%", scale: 0.8 },
   animate: { "--x": "-100%", scale: 1 },
   whileTap: { scale: 0.95 },
@@ -26,9 +26,12 @@ const animationProps = {
       mass: 0.5,
     },
   },
-} as AnimationProps;
+};
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({ children, className }) => {
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  children,
+  className,
+}) => {
   return (
     <motion.span
       className={cn(
@@ -46,16 +49,17 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ children, className }) => {
         >
           {children}
         </span>
+
         <span
-          style={{
-            mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box exclude,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
-            WebkitMask:
-              "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box exclude,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
-            backgroundImage:
-              "linear-gradient(-75deg,var(--primary)/10% calc(var(--x)+20%),var(--primary)/50% calc(var(--x)+25%),var(--primary)/10% calc(var(--x)+100%))",
-          }}
           className="absolute inset-0 z-10 block rounded-[inherit] p-px"
-        ></span>
+          style={{
+            mask: "linear-gradient(#000,#000) content-box exclude,linear-gradient(#000,#000)",
+            WebkitMask:
+              "linear-gradient(#000,#000) content-box exclude,linear-gradient(#000,#000)",
+            backgroundImage:
+              "linear-gradient(-75deg,rgba(var(--primary-rgb),0.1) calc(var(--x) + 20%), rgba(var(--primary-rgb),0.5) calc(var(--x) + 25%), rgba(var(--primary-rgb),0.1) calc(var(--x) + 100%))",
+          }}
+        />
       </span>
     </motion.span>
   );

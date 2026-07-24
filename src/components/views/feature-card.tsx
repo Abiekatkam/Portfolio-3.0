@@ -101,7 +101,7 @@ export function FeatureCard({
 
   return (
     <Link
-      to={feature.url}
+      to={feature.url ?? "#"}
       target="_blank"
       rel="noopener noreferrer"
       className={commonClassName}

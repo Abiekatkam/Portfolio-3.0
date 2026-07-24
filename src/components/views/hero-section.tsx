@@ -1,6 +1,5 @@
 import { Badge } from "../../components/ui/badge";
 import BorderCard from "./border-card";
-import PROFILE_PICTURE from "../../assets/profile-pic.png";
 import PIXALETED_PROFILE_PICTURE from "../../assets/pixaled-profile-pic.png";
 
 const HeroSection = () => {

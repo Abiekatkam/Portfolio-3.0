@@ -57,7 +57,7 @@ function EducationItem({ education }: { education: EducationProps }) {
           </div>
         )}
 
-        {education.skills?.length > 0 && (
+        {education.skills && education.skills.length > 0 && (
           <div>
             <span className="font-semibold uppercase text-xs text-neutral-500 dark:text-neutral-300 block mb-4">
               Skills

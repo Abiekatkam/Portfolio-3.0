@@ -34,11 +34,11 @@ export interface EducationProps {
   institution: string;
   in: string;
   out: string;
-  description?: string;
+  description?: string | undefined;
   images?: string[];
   location?: string;
   locationUrl?: string;
-  skills?: string[];
+  skills?: string[] | [];
 }
 
 export interface FlickeringGridProps extends React.HTMLAttributes<HTMLDivElement> {
